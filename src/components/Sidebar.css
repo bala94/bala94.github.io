@@ -1,8 +1,29 @@
 .gt-demo-sidebar{
-    border-right:1px solid green;
+   
+    color:balck;
+    height: 80vh;
+    overflow-y:auto;
 }
 
-.Collapsible__trigger{
-    width:100% !imporant;
-    background: lightgrey;
+
+
+.gt-demo-sidebar-link{
+    margin-bottom: 5px;
+    
+    
 }
+
+.gt-demo-sidebar-link a{
+    color:#434344;
+    font-size: 14px;
+    font-style: monospace;
+}
+
+.gt-demo-sidebar-search{
+    width: 100%;
+    box-shadow: 2px;
+    font-size:15px;
+    font-style: monospace;
+    margin-bottom: 5px;
+}
+

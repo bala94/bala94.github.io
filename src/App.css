@@ -1,0 +1,42 @@
+
+
+.gt-demo-header{
+    
+    color:green;
+    
+}
+
+.gt-demo-header > h3{
+    text-decoration: underline
+    
+}
+
+.gt-demo-subheader{
+    font-size: 19px;
+    color:blue;
+    margin-bottom: 10px;
+}
+
+.gt-demo-main-title{
+    font-size:18px;
+    color:green;
+    margin-top:10px;
+    text-align: center;
+}
+
+.gt-demo-main-body{
+    margin-top: 27px;
+}
+.gt-demo-codeblock{
+    background-color: #fffff2;
+    padding-left: 0px;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+    color: #a67f59;
+    background: #fffff2 !important;
+}
+
+.gt-demo-innercodeblock{
+    padding-left:0px !important;
+}
