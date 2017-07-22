@@ -1,6 +1,6 @@
 import React from 'react';
 import App from './App.jsx';
-import Home from './Home.jsx'
+import Home from './components/Home.jsx'
 import {Route,IndexRedirect} from 'react-router';
 
 
