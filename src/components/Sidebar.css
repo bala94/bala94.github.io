@@ -1,0 +1,8 @@
+.gt-demo-sidebar{
+    border-right:1px solid green;
+}
+
+.Collapsible__trigger{
+    width:100% !imporant;
+    background: lightgrey;
+}
