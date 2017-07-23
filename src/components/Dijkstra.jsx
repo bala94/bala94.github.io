@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import BodyTitle from './BodyTitle';
-import BasicGraph from '../images/basicgraph.jpg';
 import Code from './Code';
+import {Link} from 'react-router';
+import dijkstra1 from '../images/dijkstra1.jpg';
 
 
 class Dijkstra extends Component {
@@ -16,26 +17,28 @@ class Dijkstra extends Component {
 
                 
 
-                <p> There are multiple ways to initialize this Graph.Choose the way which best suits for your raw input data. 
-                    Below examples explains all different ways.
+                <p>  
+                    Dijkstra is single source Shortest path Algorithm.
                </p>
-                
-                <div className="row gt-demo-home-img"> 
-                   <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"><img src={BasicGraph}/></div>
-                   <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                      <div style={{color:"green",fontStyle:"italic"}}> 
-                          <p> Notes: </p>
-                          <p>  By default, weight = 1 for all edges </p>
-                          <p> By default, type ="directed" for the graph</p>
-                      </div>
-                   </div>
+
+               
+               <p className="gt-demo-notes">
+                    Note: Dijkstra Algorithm will not run on <Link to="/negative-cycle"> Negative Cycle graph </Link>.
+                  
+                </p>
+                  <p> Make sure that there is no negative cycle in your graph. Or use <span className="gt-demo-highlight-keyword"> isNegativeCyclic </span> function from <span className="gt-demo-highlight-keyword"> graph-js/negative-cyclic </span> library
+                        to check if there any negative cycles in the graph </p>
+
+                <p> Example Usage:</p> 
+                <div style={{textAlign:"center"}}> 
+                    <img src={dijkstra1}/>
                 </div>
 
                 <br/>
-                <p> Method 1:</p>
+                
                 <div>
 
-                    <Code code={code1}/>
+                    <Code code={dijkstra}/>
                 </div>
 
 
@@ -48,35 +51,28 @@ class Dijkstra extends Component {
 
 export default Dijkstra;
 
-const code1 = `
+const dijkstra = `
 import Graph from 'graphs-js';
+import dijkstra from 'graphs-js/dijkstra';
 
-let G = new Graph();
-G.addEdge('a','b');  //If these vertices are not there in G, It'll create.Otherwise it'll use the existing. 
-G.addEdge('a','e'); 
-G.addEdge('d','c'); 
-G.addEdge('d','e'); 
-G.addEdge('b','d');
-G.addEdge('c','e')
+/** ....
+ * Graph G initialziation code as per the given image */
+
+let G1 = dijkstra(G,'a');  //It run dijkstra on Graph G, and starting from vertex 'a'
+//G1 is the relaxed Graph (output of dijkstra)
+
+G1.shortestDistance('f'); //Output: 13.5 (3+2+7+1.5) 
+G1.getShortestPath('e'); //Output: ['a','b','d','e']
+G1.getDijkstraSource(); //Output: a
+
+let G2 = dijkstra(G,'d');
+G2.shortestDistance('f'); //Output: 8.5 (7+1.5)
+G2.shortestDistance('b'); //Output: null (No path exist)
+G1.getDijkstraSource(); //Output: d
+
+
+
+
+
 `
 
-const code2 = `
-import Graph from 'graphs-js';
-
-let G = new Graph({
-   input:{
-        a: ['b','e'],
-        c: ['e'],
-        d: ['c','e'],
-        b: ['d']
-   } 
-})
-`
-
-const code3 = `
-import Graph from 'graphs-js';
-
-let G = new Graph({
-   input:
-})
-`

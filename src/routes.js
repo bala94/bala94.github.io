@@ -12,5 +12,6 @@ export default (
         <IndexRedirect to="/home" component={Home}/>
         <Route path="/home" component={Home}/>
         <Route path= "/dijkstra" component={Dijkstra}/>
+        <Route path="*" component={UnderDevelopment}/>
      </Route>
      )

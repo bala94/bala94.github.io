@@ -37,6 +37,27 @@
     padding-left:0px !important;
 }
 
+.gt-demo-notes{
+   font-style: italic;
+   color:#ed8ee0
+}
+.gt-demo-highlight-keyword{
+    font-style: italic;
+
+}
+
 .gt-demo-body-title{
     text-decoration: underline;
+}
+
+.gt-demo-body-subheader{
+    font-weight: bold;
+    color:grey;
+    font-size:17px;
+
+}
+.gt-demo-body-method-title{
+    font-weight: bold;
+    color:grey;
+    font-style: italic;
 }

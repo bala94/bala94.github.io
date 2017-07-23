@@ -4,7 +4,7 @@ class UnderDevelopment extends Component {
     render() {
         return (
             <div>
-                This module is under development
+                <div className="jumbotron"> This module is under development </div>
             </div>
         );
     }
