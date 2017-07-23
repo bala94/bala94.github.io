@@ -2,12 +2,23 @@ import React, { Component } from 'react';
 import BodyTitle from './BodyTitle';
 import BasicGraph from '../images/basicgraph.jpg';
 import "./Home.css";
-import Code from './Code';
 
 class Home extends Component {
     render() {
-       console.log(Prism);
-       
+
+        let code = `
+         import Graph from 'graphs-js';
+
+         let G = new Graph();
+         G.addEdge(2,3);  // If these vertices are not there in G, It'll create. 
+         //Otherwise it'll use the existing.
+
+         G.addVertex(4);
+         G.addEdge(5,6);
+
+        `
+        //let htmlCode = Prism.highlight(code, Prism.languages.javascript);
+
         return (
             <div>
                 <BodyTitle url={"https://github.com/bala94/graph-theory/blob/master/src/Graph.ts"}
@@ -37,13 +48,21 @@ class Home extends Component {
                 </div>
 
                 <br/>
-                <p style={{marginBottom:"0px"}}> Method 1:</p>
+                <p> Method 1:</p>
                 <Code code={code1}/>
 
-                <br/>
-                <p style={{marginBottom:"0px"}}> Method 2:</p>
+
+                <p> Method 2:</p>
                 <div>
-                   <Code code={code2}/>
+
+                    
+                    <pre>
+                        <code className="language-js">
+                            {code2}
+                            <br/>
+                        </code>
+
+                    </pre>
                 </div>
 
 

@@ -1,8 +1,7 @@
 .gt-demo-sidebar{
-   
-    color:balck;
-    height: 80vh;
-    overflow-y:auto;
+   max-height: 80vh;
+   overflow: auto;
+   border-right: 1px solid lightgrey;
 }
 
 

@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 import BodyTitle from './BodyTitle';
 import BasicGraph from '../images/basicgraph.jpg';
-import "./Home.css";
 import Code from './Code';
 
-class Home extends Component {
+
+class Dijkstra extends Component {
     render() {
-       console.log(Prism);
        
         return (
             <div>
                 <BodyTitle url={"https://github.com/bala94/graph-theory/blob/master/src/Graph.ts"}
-                           title={"Graph Initialization"}/>
+                           title={"Dijkstra's Shortest Path Algorithm"}/>
 
                 
-
-                <p>Initialization of Graph is the first and mandatory step to run any algorithm in graphs-js library.
-                   This Graph uses Hash structure to store vertices,edges. So retreiving any vertex,edge or weight of any edge is executed in constant time. <i> O(1) </i> <br/> 
-                </p>
 
                 
 
@@ -37,14 +32,13 @@ class Home extends Component {
                 </div>
 
                 <br/>
-                <p style={{marginBottom:"0px"}}> Method 1:</p>
-                <Code code={code1}/>
-
-                <br/>
-                <p style={{marginBottom:"0px"}}> Method 2:</p>
+                <p> Method 1:</p>
                 <div>
-                   <Code code={code2}/>
+
+                    <Code code={code1}/>
                 </div>
+
+
 
 
             </div>
@@ -52,7 +46,7 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Dijkstra;
 
 const code1 = `
 import Graph from 'graphs-js';
